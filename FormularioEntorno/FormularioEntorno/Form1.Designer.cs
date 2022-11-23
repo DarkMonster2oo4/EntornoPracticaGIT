@@ -43,6 +43,7 @@
             this.txtTelegrama.Name = "txtTelegrama";
             this.txtTelegrama.Size = new System.Drawing.Size(632, 235);
             this.txtTelegrama.TabIndex = 0;
+            this.txtTelegrama.TextChanged += new System.EventHandler(this.txtTelegrama_TextChanged);
             // 
             // txtPrecio
             // 
@@ -71,6 +72,7 @@
             this.Coste.Size = new System.Drawing.Size(38, 15);
             this.Coste.TabIndex = 3;
             this.Coste.Text = "label1";
+            this.Coste.Click += new System.EventHandler(this.Coste_Click);
             // 
             // label2
             // 
@@ -80,6 +82,7 @@
             this.label2.Size = new System.Drawing.Size(35, 15);
             this.label2.TabIndex = 4;
             this.label2.Text = "Texto";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // button1
             // 
@@ -89,6 +92,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Calcular";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
