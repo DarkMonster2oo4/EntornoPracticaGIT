@@ -17,11 +17,6 @@ namespace FormularioEntorno
 
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             string textoTelegrama;
@@ -31,18 +26,12 @@ namespace FormularioEntorno
             //Leo el telegrama
             textoTelegrama = txtTelegrama.Text;
             // telegrama urgente?
-            if (rbUrgente.Checked)
-            {
+            if (cbUrgente.Checked)
                 tipoTelegrama = 'u';
-            }
-            if (rbOrdinario.Checked)
-            {
-                tipoTelegrama = 'o';
-            }
             //Obtengo el número de palabras que forma el telegrama
             for (int i = 0; i < textoTelegrama.Length; i++)
             {
-                if (textoTelegrama[i] == ' ' && textoTelegrama[i - 1] != ' ')
+                if (textoTelegrama[i] == ' ' && textoTelegrama[i + 1] != ' ')
                 {
                     numPalabras++;
                 }
@@ -66,6 +55,21 @@ namespace FormularioEntorno
             }
 
             txtPrecio.Text = coste.ToString() + " euros";
+        }
+
+        private void Coste_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTelegrama_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
